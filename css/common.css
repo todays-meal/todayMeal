@@ -1,28 +1,17 @@
-/* =========================
-   오늘한끼 Common Style
-========================= */
-
 :root {
-  --color-primary: #536b32;
-  --color-primary-hover: #435729;
-  --color-primary-light: #eef4e7;
+  --primary: #536b32;
+  --primary-hover: #435729;
+  --primary-light: #eef4e7;
+  --accent: #e8794f;
 
-  --color-accent: #e8794f;
+  --background: #fffdf8;
+  --surface: #ffffff;
+  --border: #e5e8e1;
 
-  --color-background: #fffdf8;
-  --color-surface: #ffffff;
-  --color-border: #e5e8e1;
-
-  --color-text: #1f2b1b;
-  --color-text-body: #42483f;
-  --color-text-sub: #747a70;
-
-  --max-width: 1080px;
+  --title: #1f2b1b;
+  --text: #42483f;
+  --muted: #747a70;
 }
-
-/* =========================
-   Reset
-========================= */
 
 * {
   box-sizing: border-box;
@@ -30,54 +19,14 @@
 
 body {
   margin: 0;
-
-  font-family:
-    Pretendard,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
-  font-size: 16px;
-  color: var(--color-text-body);
-  background-color: var(--color-background);
+  font-family: Pretendard, sans-serif;
+  background: var(--background);
+  color: var(--text);
 }
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* =========================
-   Layout
-========================= */
 
 .container {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 24px;
 }
