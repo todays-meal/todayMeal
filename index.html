@@ -81,7 +81,89 @@
       </section>
 
       <!-- 06 핵심 기능 소개 - 김서진 -->
-      <section class="feature"></section>
+      <section class="feature">
+        <section class="feature section" id="feature">
+          <div class="page-container">
+            <header class="section-header text-center mb-5">
+              <h2 class="section-title">집에 있는 재료만 골라보세요</h2>
+              <p class="section-description">
+                현재 가지고 있는 식재료를 선택하면 활용할 수 있는 메뉴를 확인할
+                수 있어요.
+              </p>
+            </header>
+
+            <div class="feature-box">
+              <nav class="feature-category" aria-label="재료 카테고리">
+                <button type="button" class="ingredient-category active">
+                  전체
+                </button>
+                <button type="button" class="ingredient-category">채소</button>
+                <button type="button" class="ingredient-category">육류</button>
+                <button type="button" class="ingredient-category">
+                  해산물
+                </button>
+                <button type="button" class="ingredient-category">
+                  유제품
+                </button>
+              </nav>
+
+              <section
+                class="ingredient-area"
+                aria-labelledby="ingredient-title"
+              >
+                <h3 id="ingredient-title" class="visually-hidden">재료 목록</h3>
+
+                <ul class="ingredient-list list-unstyled">
+                  <li>
+                    <button type="button" class="ingredient selected">
+                      ✓ 계란
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient selected">
+                      ✓ 감자
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient selected">
+                      ✓ 양파
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient">당근</button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient">토마토</button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient">대파</button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient">두부</button>
+                  </li>
+                  <li>
+                    <button type="button" class="ingredient">닭고기</button>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="selected-area" aria-labelledby="selected-title">
+                <h3 id="selected-title">선택한 재료 3개</h3>
+
+                <ul class="selected-list list-unstyled">
+                  <li>계란 ×</li>
+                  <li>감자 ×</li>
+                  <li>양파 ×</li>
+                </ul>
+              </section>
+
+              <button type="button" class="feature-button">
+                이 재료로 만들 수 있는 요리
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
 
       <!-- 07 추천 레시피 - 김수연 -->
       <section class="recipes"></section>
