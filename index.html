@@ -44,35 +44,40 @@
       <section class="how">
         <section class="how section" id="how">
           <div class="page-container">
-            <header class="section-header text-center mb-5">
+            <header class="section-header text-center">
               <h2 class="section-title">오늘한끼는 이렇게 사용해요</h2>
+
               <p class="section-description">
                 간단한 3단계로 오늘의 메뉴를 찾아보세요.
               </p>
             </header>
 
-            <ol class="row g-4 list-unstyled">
-              <li class="col-12 col-md-4">
+            <ol class="how-list">
+              <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">01</span>
-                  <h3>재료 선택</h3>
-                  <p>냉장고에 있는 재료를 골라요.</p>
+                  <h3 class="how-title">재료 선택</h3>
+                  <p class="how-description">냉장고에 있는 재료를 골라요.</p>
                 </article>
               </li>
 
-              <li class="col-12 col-md-4">
+              <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">02</span>
-                  <h3>레시피 추천</h3>
-                  <p>선택한 재료로 만들 수 있는 메뉴를 확인해요.</p>
+                  <h3 class="how-title">레시피 추천</h3>
+                  <p class="how-description">
+                    선택한 재료로 만들 수 있는 메뉴를 확인해요.
+                  </p>
                 </article>
               </li>
 
-              <li class="col-12 col-md-4">
+              <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">03</span>
-                  <h3>요리 시작</h3>
-                  <p>원하는 레시피를 보고 한 끼를 완성해요.</p>
+                  <h3 class="how-title">요리 시작</h3>
+                  <p class="how-description">
+                    원하는 레시피를 보고 한 끼를 완성해요.
+                  </p>
                 </article>
               </li>
             </ol>
@@ -84,8 +89,9 @@
       <section class="feature">
         <section class="feature section" id="feature">
           <div class="page-container">
-            <header class="section-header text-center mb-5">
+            <header class="section-header text-center">
               <h2 class="section-title">집에 있는 재료만 골라보세요</h2>
+
               <p class="section-description">
                 현재 가지고 있는 식재료를 선택하면 활용할 수 있는 메뉴를 확인할
                 수 있어요.
@@ -93,64 +99,46 @@
             </header>
 
             <div class="feature-box">
-              <nav class="feature-category" aria-label="재료 카테고리">
+              <div class="feature-category" aria-label="재료 카테고리">
                 <button type="button" class="ingredient-category active">
                   전체
                 </button>
+
                 <button type="button" class="ingredient-category">채소</button>
+
                 <button type="button" class="ingredient-category">육류</button>
+
                 <button type="button" class="ingredient-category">
                   해산물
                 </button>
+
                 <button type="button" class="ingredient-category">
                   유제품
                 </button>
-              </nav>
+              </div>
 
-              <section
-                class="ingredient-area"
-                aria-labelledby="ingredient-title"
-              >
+              <section aria-labelledby="ingredient-title">
                 <h3 id="ingredient-title" class="visually-hidden">재료 목록</h3>
 
-                <ul class="ingredient-list list-unstyled">
-                  <li>
-                    <button type="button" class="ingredient selected">
-                      ✓ 계란
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient selected">
-                      ✓ 감자
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient selected">
-                      ✓ 양파
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient">당근</button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient">토마토</button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient">대파</button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient">두부</button>
-                  </li>
-                  <li>
-                    <button type="button" class="ingredient">닭고기</button>
-                  </li>
+                <ul class="ingredient-list">
+                  <li class="ingredient selected">✓ 계란</li>
+                  <li class="ingredient selected">✓ 감자</li>
+                  <li class="ingredient selected">✓ 양파</li>
+
+                  <li class="ingredient">당근</li>
+                  <li class="ingredient">토마토</li>
+                  <li class="ingredient">대파</li>
+                  <li class="ingredient">두부</li>
+                  <li class="ingredient">닭고기</li>
                 </ul>
               </section>
 
               <section class="selected-area" aria-labelledby="selected-title">
-                <h3 id="selected-title">선택한 재료 3개</h3>
+                <h3 class="selected-title" id="selected-title">
+                  선택한 재료 3개
+                </h3>
 
-                <ul class="selected-list list-unstyled">
+                <ul class="selected-list">
                   <li>계란 ×</li>
                   <li>감자 ×</li>
                   <li>양파 ×</li>
@@ -172,7 +160,93 @@
       <section class="other-features"></section>
 
       <!-- 09 FAQ - 곽승기 -->
-      <section class="faq"></section>
+      <section id="faq-gs" class="faq">
+        <div class="faq-gs-container">
+          <div class="faq-gs-header">
+            <span class="faq-gs-label">FAQ</span>
+            <h2>자주 묻는 질문</h2>
+            <p>
+              오늘한끼 이용 중 궁금한 점이 있으신가요?<br />
+              많이 묻는 질문을 먼저 확인해보세요.
+            </p>
+          </div>
+
+          <div class="faq-gs-content">
+            <div class="faq-gs-help">
+              <div class="faq-gs-help-icon">👩‍🍳</div>
+
+              <h3>궁금한 점이 있으신가요?</h3>
+
+              <p>
+                오늘한끼를 이용하면서 궁금한 내용을<br />
+                아래 자주 묻는 질문에서 확인해보세요.
+              </p>
+            </div>
+
+            <div class="faq-gs-list">
+              <div class="faq-gs-item faq-gs-active">
+                <button class="faq-gs-question" type="button">
+                  <span><b>Q</b> 모든 재료를 입력해야 하나요?</span>
+                  <span class="faq-gs-arrow">⌃</span>
+                </button>
+
+                <div class="faq-gs-answer">
+                  아니요. 지금 냉장고에 있는 재료만 선택하면 됩니다. 선택한
+                  재료를 기준으로 만들 수 있는 다양한 레시피를 추천해드려요.
+                </div>
+              </div>
+
+              <div class="faq-gs-item">
+                <button class="faq-gs-question" type="button">
+                  <span><b>Q</b> 재료가 부족하면 어떻게 하나요?</span>
+                  <span class="faq-gs-arrow">⌄</span>
+                </button>
+
+                <div class="faq-gs-answer">
+                  레시피 상세 화면에서 현재 가지고 있는 재료와 부족한 재료를
+                  구분해서 확인할 수 있습니다.
+                </div>
+              </div>
+
+              <div class="faq-gs-item">
+                <button class="faq-gs-question" type="button">
+                  <span><b>Q</b> 요리를 잘 못해도 사용할 수 있나요?</span>
+                  <span class="faq-gs-arrow">⌄</span>
+                </button>
+
+                <div class="faq-gs-answer">
+                  네. 조리 시간과 난이도, 필요한 재료, 조리 순서를 함께 제공해
+                  요리를 처음 하는 분도 쉽게 따라할 수 있도록 구성했습니다.
+                </div>
+              </div>
+
+              <div class="faq-gs-item">
+                <button class="faq-gs-question" type="button">
+                  <span><b>Q</b> 원하는 레시피가 없으면 어떻게 하나요?</span>
+                  <span class="faq-gs-arrow">⌄</span>
+                </button>
+
+                <div class="faq-gs-answer">
+                  선택한 재료를 변경하거나 다른 재료를 추가한 뒤 다시 레시피를
+                  찾아볼 수 있습니다.
+                </div>
+              </div>
+
+              <div class="faq-gs-item">
+                <button class="faq-gs-question" type="button">
+                  <span><b>Q</b> 오늘한끼는 어떤 서비스인가요?</span>
+                  <span class="faq-gs-arrow">⌄</span>
+                </button>
+
+                <div class="faq-gs-answer">
+                  오늘한끼는 냉장고에 남아 있는 식재료를 선택하면 해당 재료로
+                  만들 수 있는 메뉴와 레시피를 추천해주는 서비스입니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- 10 CTA -  -->
       <section class="cta"></section>
