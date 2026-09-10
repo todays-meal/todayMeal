@@ -1,16 +1,37 @@
+/* common.css */
+
 :root {
-  --primary: #536b32;
-  --primary-hover: #435729;
-  --primary-light: #eef4e7;
-  --accent: #e8794f;
+  /* Brand */
+  --color-primary: #536b32;
+  --color-primary-hover: #435729;
+  --color-primary-light: #eef4e7;
+  --color-accent: #e8794f;
 
-  --background: #fffdf8;
-  --surface: #ffffff;
-  --border: #e5e8e1;
+  /* Background */
+  --color-background: #fffdf8;
+  --color-surface: #ffffff;
+  --color-border: #e5e8e1;
 
-  --title: #1f2b1b;
-  --text: #42483f;
-  --muted: #747a70;
+  /* Text */
+  --color-title: #1f2b1b;
+  --color-text: #42483f;
+  --color-muted: #747a70;
+
+  /* Size */
+  --container-width: 1080px;
+  --section-padding: 80px;
+
+  /* Radius */
+  --radius-button: 10px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+
+  /* Font */
+  --font-title: 32px;
+  --font-section-title: 24px;
+  --font-card-title: 18px;
+  --font-body: 16px;
+  --font-small: 14px;
 }
 
 * {
@@ -20,17 +41,37 @@
 body {
   margin: 0;
   font-family: Pretendard, sans-serif;
-  background: var(--background);
-  color: var(--text);
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 .page-container {
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .section {
-  padding: 80px 0;
+  padding: var(--section-padding) 0;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+
+  color: var(--color-title);
+  font-size: var(--font-section-title);
+  font-weight: 700;
+}
+
+.section-description {
+  margin: 0;
+
+  color: var(--color-muted);
+  font-size: var(--font-body);
+  line-height: 1.6;
 }
