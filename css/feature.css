@@ -1,0 +1,133 @@
+/* feature.css */
+
+.feature {
+  --feature-box-padding: 40px;
+  --feature-item-gap: 12px;
+  --feature-category-gap: 10px;
+  --feature-tag-padding: 10px 16px;
+
+  background: var(--color-background);
+}
+
+.feature-box {
+  padding: var(--feature-box-padding);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.feature-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--feature-category-gap);
+
+  margin-bottom: 28px;
+}
+
+.ingredient-category {
+  padding: 8px 16px;
+
+  color: var(--color-text);
+  font-size: var(--font-small);
+
+  background: #F4F5F2;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+}
+
+.ingredient-category.active {
+  color: #FFFFFF;
+
+  background: var(--color-primary);
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--feature-item-gap);
+
+  padding: 0;
+  margin: 0 0 32px;
+
+  list-style: none;
+}
+
+.ingredient {
+  padding: var(--feature-tag-padding);
+
+  color: var(--color-text);
+
+  background: #F4F5F2;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+}
+
+.ingredient.selected {
+  color: var(--color-primary);
+
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.selected-area {
+  padding-top: 24px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.selected-title {
+  margin: 0 0 12px;
+
+  color: var(--color-title);
+  font-size: var(--font-body);
+  font-weight: 600;
+}
+
+.selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 0;
+  margin: 0 0 24px;
+
+  list-style: none;
+}
+
+.selected-list li {
+  padding: 8px 14px;
+
+  color: var(--color-primary);
+  font-size: var(--font-small);
+
+  background: var(--color-primary-light);
+  border-radius: var(--radius-pill);
+}
+
+.feature-button {
+  width: 100%;
+  height: 48px;
+
+  color: #FFFFFF;
+  font-size: var(--font-body);
+  font-weight: 600;
+
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-button);
+
+  cursor: pointer;
+}
+
+.feature-button:hover {
+  background: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .feature {
+    --feature-box-padding: 24px;
+  }
+}
