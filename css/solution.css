@@ -1,0 +1,49 @@
+.solution {
+  max-width: none;
+
+  background-color: #fffdf8;
+}
+
+.solution-list {
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.solution-card {
+  padding: 40px 35px;
+
+  border-radius: 15px;
+
+  background-color: #fff;
+
+  text-align: center;
+
+  transition: 0.2s;
+}
+
+.solution-card h3 {
+  margin-bottom: 15px;
+
+  font-size: 21px;
+}
+
+.solution-card p {
+  font-size: 15px;
+  color: #666;
+}
+
+.solution-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  text-align: center;
+  margin:80px
+}
