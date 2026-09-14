@@ -1,4 +1,4 @@
-.solution {
+#solution {
   max-width: none;
 
   background-color: #fffdf8;
@@ -45,5 +45,12 @@
   justify-content: center;
   height: 90px;
   text-align: center;
-  margin:80px
+  
+}
+
+.solution-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:50px
 }

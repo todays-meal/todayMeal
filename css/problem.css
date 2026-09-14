@@ -1,4 +1,4 @@
-.problem {
+#problem {
   background-color: #fff;
 }
 
@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  background-color:#fffdf8;
 }
 
 .problem-card {
@@ -57,4 +58,11 @@
   height: 90px;
   text-align: center;
   font-size: 25px;
+  margin: 25px;
+  background-color: #fffdf8;
 }
+
+.section-title {
+  background-color: #fffdf8;
+}
+
