@@ -1,45 +1,119 @@
-/* feature.css */
-
 .feature {
-  --feature-box-padding: 40px;
-  --feature-item-gap: 12px;
-  --feature-category-gap: 10px;
-  --feature-tag-padding: 10px 16px;
+  --feature-box-padding: 48px;
 
   background: var(--color-background);
 }
 
-.feature-box {
+.feature-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 64px;
+
+  align-items: center;
+}
+
+.feature-content {
+  max-width: 420px;
+}
+
+.feature-label {
+  display: inline-flex;
+
+  padding: 7px 12px;
+  margin-bottom: 18px;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  background: var(--color-primary-light);
+  border-radius: var(--radius-pill);
+}
+
+.feature-content h2 {
+  margin: 0 0 18px;
+
+  color: var(--color-title);
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.feature-content p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.feature-preview {
   padding: var(--feature-box-padding);
 
-  background: var(--color-surface);
+  background: #fff;
+
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
+  border-radius: 24px;
+
+  box-shadow: 0 18px 50px rgba(31, 43, 27, 0.07);
+}
+
+.feature-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.feature-preview-title {
+  margin: 0;
+
+  color: var(--color-title);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.feature-preview-count {
+  padding: 6px 10px;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  background: var(--color-primary-light);
+  border-radius: var(--radius-pill);
 }
 
 .feature-category {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--feature-category-gap);
+  gap: 8px;
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .ingredient-category {
-  padding: 8px 16px;
+  padding: 9px 15px;
 
   color: var(--color-text);
-  font-size: var(--font-small);
 
-  background: #F4F5F2;
+  font-size: 14px;
+
+  background: #f4f5f2;
+
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-
-  cursor: pointer;
 }
 
 .ingredient-category.active {
-  color: #FFFFFF;
+  color: #fff;
 
   background: var(--color-primary);
 }
@@ -47,43 +121,67 @@
 .ingredient-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--feature-item-gap);
+  gap: 12px;
 
   padding: 0;
-  margin: 0 0 32px;
+  margin: 0 0 30px;
 
   list-style: none;
 }
 
 .ingredient {
-  padding: var(--feature-tag-padding);
+  padding: 11px 16px;
 
   color: var(--color-text);
 
-  background: #F4F5F2;
-  border: 1px solid transparent;
+  background: #fafafa;
+
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-pill);
 }
 
 .ingredient.selected {
   color: var(--color-primary);
 
+  font-weight: 600;
+
   background: var(--color-primary-light);
+
   border-color: var(--color-primary);
 }
 
 .selected-area {
-  padding-top: 24px;
+  padding: 24px;
 
-  border-top: 1px solid var(--color-border);
+  background: #fafbf8;
+
+  border-radius: 16px;
+}
+
+.selected-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
 }
 
 .selected-title {
-  margin: 0 0 12px;
+  margin: 0;
 
   color: var(--color-title);
-  font-size: var(--font-body);
-  font-weight: 600;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.selected-reset {
+  color: var(--color-muted);
+
+  font-size: 13px;
+
+  background: none;
+  border: 0;
 }
 
 .selected-list {
@@ -92,16 +190,17 @@
   gap: 8px;
 
   padding: 0;
-  margin: 0 0 24px;
+  margin: 0 0 22px;
 
   list-style: none;
 }
 
 .selected-list li {
-  padding: 8px 14px;
+  padding: 8px 13px;
 
   color: var(--color-primary);
-  font-size: var(--font-small);
+
+  font-size: 14px;
 
   background: var(--color-primary-light);
   border-radius: var(--radius-pill);
@@ -109,25 +208,39 @@
 
 .feature-button {
   width: 100%;
-  height: 48px;
+  height: 52px;
 
-  color: #FFFFFF;
-  font-size: var(--font-body);
+  color: #fff;
+
+  font-size: 16px;
   font-weight: 600;
 
   background: var(--color-primary);
-  border: 0;
-  border-radius: var(--radius-button);
 
-  cursor: pointer;
+  border: 0;
+  border-radius: 12px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .feature-button:hover {
   background: var(--color-primary-hover);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .feature {
+  .feature-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .feature-preview {
     --feature-box-padding: 24px;
+  }
+
+  .feature-content h2 {
+    font-size: 28px;
   }
 }

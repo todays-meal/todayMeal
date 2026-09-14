@@ -29,8 +29,8 @@
   <body>
     <!-- 01 Header - 이한준 -->
     <header class="header">
-      <div>
-        <img class="logo-image" src="오늘한끼2.png" />
+      <div class="logo">
+        <img class="logo-image" src="./images/오늘한끼2.png" alt="오늘한끼 로고"/>
       </div>
 
       <nav class="nav">
@@ -139,10 +139,12 @@
         <section class="how section" id="how">
           <div class="page-container">
             <header class="section-header text-center">
-              <h2 class="section-title">오늘한끼는 이렇게 사용해욥</h2>
+              <p class="section-eyebrow">HOW IT WORKS</p>
+
+              <h2 class="section-title">오늘한끼는 이렇게 사용해요</h2>
 
               <p class="section-description">
-                간단한 3단계로 오늘의 메뉴를 찾아보세요.
+                냉장고 속 재료를 고르고, 오늘 만들 수 있는 메뉴를 확인해보세요.
               </p>
             </header>
 
@@ -150,27 +152,45 @@
               <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">01</span>
+
+                  <div class="how-icon">🥕</div>
+
                   <h3 class="how-title">재료 선택</h3>
-                  <p class="how-description">냉장고에 있는 재료를 골라요.</p>
+
+                  <p class="how-description">
+                    냉장고에 남아 있는 식재료를 간단하게 골라요.
+                  </p>
+
+                  <span class="how-arrow">→</span>
                 </article>
               </li>
 
               <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">02</span>
+
+                  <div class="how-icon">🍳</div>
+
                   <h3 class="how-title">레시피 추천</h3>
+
                   <p class="how-description">
-                    선택한 재료로 만들 수 있는 메뉴를 확인해요.
+                    가지고 있는 재료로 만들 수 있는 메뉴를 확인해요.
                   </p>
+
+                  <span class="how-arrow">→</span>
                 </article>
               </li>
 
               <li class="how-item">
                 <article class="how-card">
                   <span class="how-number">03</span>
+
+                  <div class="how-icon">🍽️</div>
+
                   <h3 class="how-title">요리 시작</h3>
+
                   <p class="how-description">
-                    원하는 레시피를 보고 한 끼를 완성해요.
+                    마음에 드는 레시피를 골라 오늘의 한 끼를 완성해요.
                   </p>
                 </article>
               </li>
@@ -183,65 +203,72 @@
       <section class="feature">
         <section class="feature section" id="feature">
           <div class="page-container">
-            <header class="section-header text-center">
-              <h2 class="section-title">집에 있는 재료만 골라보세요</h2>
+            <div class="feature-layout">
+              <div class="feature-content">
+                <span class="feature-label"> 핵심 기능 </span>
 
-              <p class="section-description">
-                현재 가지고 있는 식재료를 선택하면 활용할 수 있는 메뉴를 확인할
-                수 있어요.
-              </p>
-            </header>
+                <h2>
+                  집에 있는 재료만<br />
+                  간단하게 골라보세요
+                </h2>
 
-            <div class="feature-box">
-              <div class="feature-category" aria-label="재료 카테고리">
-                <button type="button" class="ingredient-category active">
-                  전체
-                </button>
-
-                <button type="button" class="ingredient-category">채소</button>
-
-                <button type="button" class="ingredient-category">육류</button>
-
-                <button type="button" class="ingredient-category">
-                  해산물
-                </button>
-
-                <button type="button" class="ingredient-category">
-                  유제품
-                </button>
+                <p>
+                  냉장고에 남은 재료를 선택하면 어떤 메뉴로 활용할 수 있는지
+                  쉽게 확인할 수 있어요.
+                </p>
               </div>
 
-              <section aria-labelledby="ingredient-title">
-                <h3 id="ingredient-title" class="visually-hidden">재료 목록</h3>
+              <article class="feature-preview">
+                <header class="feature-preview-header">
+                  <h3 class="feature-preview-title">
+                    냉장고에 어떤 재료가 있나요?
+                  </h3>
+
+                  <span class="feature-preview-count"> 3개 선택 </span>
+                </header>
+
+                <div class="feature-category">
+                  <button class="ingredient-category active">전체</button>
+                  <button class="ingredient-category">채소</button>
+                  <button class="ingredient-category">육류</button>
+                  <button class="ingredient-category">해산물</button>
+                  <button class="ingredient-category">유제품</button>
+                </div>
 
                 <ul class="ingredient-list">
                   <li class="ingredient selected">✓ 계란</li>
+
                   <li class="ingredient selected">✓ 감자</li>
+
                   <li class="ingredient selected">✓ 양파</li>
 
                   <li class="ingredient">당근</li>
+
                   <li class="ingredient">토마토</li>
+
                   <li class="ingredient">대파</li>
+
                   <li class="ingredient">두부</li>
-                  <li class="ingredient">닭고기</li>
                 </ul>
-              </section>
 
-              <section class="selected-area" aria-labelledby="selected-title">
-                <h3 class="selected-title" id="selected-title">
-                  선택한 재료 3개
-                </h3>
+                <section class="selected-area">
+                  <div class="selected-head">
+                    <h4 class="selected-title">선택한 재료</h4>
 
-                <ul class="selected-list">
-                  <li>계란 ×</li>
-                  <li>감자 ×</li>
-                  <li>양파 ×</li>
-                </ul>
-              </section>
+                    <button class="selected-reset">전체 삭제</button>
+                  </div>
 
-              <button type="button" class="feature-button">
-                이 재료로 만들 수 있는 요리
-              </button>
+                  <ul class="selected-list">
+                    <li>계란 ×</li>
+                    <li>감자 ×</li>
+                    <li>양파 ×</li>
+                  </ul>
+
+                  <button class="feature-button">
+                    이 재료로 만들 수 있는 요리 →
+                  </button>
+                </section>
+              </article>
             </div>
           </div>
         </section>

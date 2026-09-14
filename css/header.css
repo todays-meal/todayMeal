@@ -65,8 +65,8 @@ a {
 }
 
 .logo-image {
-  /* width: px; */
-  height: 110px;
+  width: 160px;
+  height: auto;
 }
 
 h2 {
@@ -75,7 +75,7 @@ h2 {
   justify-content: center;
   text-align: center;
   height: 80px;
- } 
+}
 
 .hero-description {
   display: flex;
