@@ -1,0 +1,174 @@
+.recommend-section {
+  width: 100%;
+  padding: 30px 20px;
+}
+
+
+/* 제목 영역 */
+
+.recommend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+
+.recommend-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.recommend-title-wrap h2 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #1f2b1b;
+}
+
+
+.recommend-title-wrap p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #92978f;
+}
+
+
+.more-link {
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #42483f;
+}
+
+
+/* 카드 전체 */
+
+.recommend-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+/* 카드 하나 */
+
+.recommend-card {
+  display: flex;
+
+  padding: 12px;
+
+  background-color: white;
+
+  border: 1px solid #e5e8e1;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* 이미지 */
+
+.recommend-image {
+  width: 135px;
+  height: 110px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  flex-shrink: 0;
+}
+
+
+/* 카드 오른쪽 */
+
+.recommend-content {
+  padding-left: 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.recommend-content h3 {
+  margin: 0 0 6px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #1f2b1b;
+}
+
+
+/* 설명 */
+
+.description {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #747a70;
+}
+
+
+/* 시간 + 난이도 */
+
+.recipe-info {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+
+  color: #747a70;
+}
+
+
+/* 태그 */
+
+.tags {
+  display: flex;
+
+  gap: 6px;
+
+  flex-wrap: wrap;
+}
+
+
+.tags span {
+  padding: 4px 9px;
+
+  background-color: #f3f4f1;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+
+  color: #747a70;
+}
+
+@media (max-width: 900px) {
+
+  .recommend-list {
+    grid-template-columns: 1fr;
+  }
+
+}
