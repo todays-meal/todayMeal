@@ -87,3 +87,288 @@ function renderRecommendRecipes() {
 
 // 함수 실행
 renderRecommendRecipes();
+
+const features = [
+  {
+    id: 1,
+
+    icon: "🛒",
+
+    title: "장보기",
+
+    description:
+      "부족한 재료를 바로 장바구니에 담아 간편하게 구매할 수 있어요.",
+
+    type: "shopping",
+
+    items: [
+      {
+        name: "양파",
+        emoji: "🧅",
+      },
+      {
+        name: "감자",
+        emoji: "🥔",
+      },
+      {
+        name: "대파",
+        emoji: "🌿",
+      },
+    ],
+  },
+
+  {
+    id: 2,
+
+    icon: "🍲",
+
+    title: "조리도구",
+
+    description: "필요한 조리도구를 미리 확인하고, 더 쉽게 요리할 수 있어요.",
+
+    type: "tools",
+
+    items: [
+      {
+        name: "프라이팬",
+        emoji: "🍳",
+      },
+      {
+        name: "칼",
+        emoji: "🔪",
+      },
+      {
+        name: "도마",
+        emoji: "🪵",
+      },
+      {
+        name: "뒤집개",
+        emoji: "🥄",
+      },
+      {
+        name: "냄비",
+        emoji: "🍲",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+
+    icon: "📅",
+
+    title: "소비기한",
+
+    description: "식재료의 소비기한을 관리해 버려지는 재료를 줄여줘요.",
+
+    type: "expiry",
+
+    items: [
+      {
+        name: "계란",
+        date: "09.28",
+        status: "여유있음",
+        statusClass: "safe",
+      },
+      {
+        name: "양파",
+        date: "09.24",
+        status: "3일 남음",
+        statusClass: "warning",
+      },
+      {
+        name: "감자",
+        date: "09.21",
+        status: "오늘까지",
+        statusClass: "danger",
+      },
+    ],
+  },
+];
+
+const featureList = document.querySelector("#feature-list");
+
+function renderFeatures() {
+  featureList.textContent = "";
+
+  features.forEach((feature) => {
+    const card = document.createElement("article");
+
+    card.className = "feature-card";
+
+    card.innerHTML = `
+      <div class="feature-card-top">
+
+        <div class="feature-icon">
+          ${feature.icon}
+        </div>
+
+        <div class="feature-text">
+
+          <h3>
+            ${feature.title}
+          </h3>
+
+          <p>
+            ${feature.description}
+          </p>
+
+        </div>
+
+        <button
+          class="feature-arrow"
+          data-id="${feature.id}"
+          aria-label="${feature.title} 자세히 보기"
+        >
+          ›
+        </button>
+
+      </div>
+
+
+      <div class="feature-preview">
+
+        ${createPreview(feature)}
+
+      </div>
+
+    `;
+
+    featureList.append(card);
+  });
+}
+
+renderFeatures();
+
+function createPreview(feature) {
+  // 장보기
+  if (feature.type === "shopping") {
+    return `
+      <div class="shopping-preview">
+
+        <strong>
+          부족한 재료 ${feature.items.length}개
+        </strong>
+
+        <div class="shopping-items">
+
+          ${feature.items
+            .map(
+              (item) => `
+                <div class="shopping-item">
+
+                  <input
+                    type="checkbox"
+                    checked
+                  >
+
+                  <span class="item-emoji">
+                    ${item.emoji}
+                  </span>
+
+                  <span>
+                    ${item.name}
+                  </span>
+
+                </div>
+              `,
+            )
+            .join("")}
+
+        </div>
+
+        <button class="green-button">
+          🛒 장바구니에 담기
+        </button>
+
+      </div>
+    `;
+  }
+
+  // 조리도구
+  if (feature.type === "tools") {
+    return `
+      <div class="tools-preview">
+
+        <strong>
+          필요한 조리도구
+        </strong>
+
+        <div class="tool-grid">
+
+          ${feature.items
+            .map(
+              (item) => `
+                <div class="tool-item">
+
+                  <div class="tool-emoji">
+                    ${item.emoji}
+                  </div>
+
+                  <span>
+                    ${item.name}
+                  </span>
+
+                </div>
+              `,
+            )
+            .join("")}
+
+        </div>
+
+      </div>
+    `;
+  }
+
+  // 소비기한
+  if (feature.type === "expiry") {
+    return `
+      <div class="expiry-preview">
+
+        <div class="preview-title">
+
+          <strong>
+            내 냉장고 식재료
+          </strong>
+
+          <span>
+            전체보기 ›
+          </span>
+
+        </div>
+
+
+        <div class="expiry-list">
+
+          ${feature.items
+            .map(
+              (item) => `
+                <div class="expiry-item">
+
+                  <strong>
+                    ${item.name}
+                  </strong>
+
+                  <span class="expiry-date">
+                    ${item.date}
+                  </span>
+
+                  <span
+                    class="expiry-status ${item.statusClass}"
+                  >
+                    ${item.status}
+                  </span>
+
+                </div>
+              `,
+            )
+            .join("")}
+
+        </div>
+
+      </div>
+    `;
+  }
+
+  return "";
+}
