@@ -1,174 +1,763 @@
+/* =========================
+   추천 메뉴 전체
+========================= */
+
 .recommend-section {
   width: 100%;
-  padding: 30px 20px;
+  padding: 28px 20px;
+
+  box-sizing: border-box;
+
+  background-color: #fffdf8;
+
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 
-/* 제목 영역 */
+/* =========================
+   제목
+========================= */
 
 .recommend-header {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 
-.recommend-title-wrap {
+.recommend-title {
   display: flex;
   align-items: center;
+
   gap: 12px;
 }
 
 
-.recommend-title-wrap h2 {
+.recommend-title h2 {
   margin: 0;
 
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
 
-  color: #1f2b1b;
+  color: #20291e;
 }
 
 
-.recommend-title-wrap p {
+.recommend-title p {
   margin: 0;
 
-  font-size: 14px;
+  font-size: 13px;
 
-  color: #92978f;
+  color: #969b92;
 }
 
 
 .more-link {
-  text-decoration: none;
+  color: #3f493a;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 
-  color: #42483f;
+  text-decoration: none;
 }
 
 
-/* 카드 전체 */
+.more-link:hover {
+  color: #536b32;
+}
+
+
+/* =========================
+   카드 목록
+========================= */
 
 .recommend-list {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 14px;
+  gap: 12px;
 }
 
 
-/* 카드 하나 */
+/* =========================
+   카드
+========================= */
 
 .recommend-card {
   display: flex;
 
-  padding: 12px;
+  min-height: 145px;
 
-  background-color: white;
+  padding: 10px;
 
-  border: 1px solid #e5e8e1;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e7e9e3;
 
   border-radius: 12px;
 
-  box-sizing: border-box;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 
-/* 이미지 */
+.recommend-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 7px 18px rgba(50, 65, 45, 0.09);
+}
+
+
+/* =========================
+   음식 이미지
+========================= */
 
 .recommend-image {
-  width: 135px;
-  height: 110px;
+  width: 145px;
+  height: 125px;
 
   object-fit: cover;
 
-  border-radius: 8px;
+  border-radius: 9px;
 
   flex-shrink: 0;
 }
 
 
-/* 카드 오른쪽 */
+/* =========================
+   오른쪽 내용
+========================= */
 
 .recommend-content {
-  padding-left: 14px;
-
   display: flex;
+
   flex-direction: column;
 
-  justify-content: center;
+  padding: 5px 8px 4px 14px;
 }
 
 
 .recommend-content h3 {
-  margin: 0 0 6px;
+  margin: 0 0 5px 0;
 
-  font-size: 18px;
-  font-weight: 700;
+  color: #20291e;
 
-  color: #1f2b1b;
+  font-size: 17px;
+  font-weight: 750;
 }
 
 
 /* 설명 */
 
-.description {
+.recommend-description {
   margin: 0 0 8px;
 
-  font-size: 13px;
-  line-height: 1.5;
+  min-height: 38px;
 
-  color: #747a70;
-}
-
-
-/* 시간 + 난이도 */
-
-.recipe-info {
-  display: flex;
-
-  gap: 12px;
-
-  margin-bottom: 8px;
+  color: #767c72;
 
   font-size: 12px;
 
-  color: #747a70;
+  line-height: 1.5;
 }
 
 
-/* 태그 */
+/* =========================
+   시간 / 난이도
+========================= */
 
-.tags {
+.recommend-info {
   display: flex;
 
-  gap: 6px;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 8px;
+
+  color: #747a70;
+
+  font-size: 12px;
+}
+
+
+.difficulty {
+  color: #63795a;
+}
+
+
+/* =========================
+   재료 태그
+========================= */
+
+.recommend-tags {
+  display: flex;
+
+  gap: 5px;
 
   flex-wrap: wrap;
 }
 
 
-.tags span {
+.recommend-tags span {
   padding: 4px 9px;
 
-  background-color: #f3f4f1;
+  background-color: #f3f5ef;
 
   border-radius: 12px;
 
-  font-size: 11px;
+  color: #66705f;
 
-  color: #747a70;
+  font-size: 11px;
+  font-weight: 500;
 }
+
+
+/* =========================
+   반응형
+========================= */
 
 @media (max-width: 900px) {
 
   .recommend-list {
     grid-template-columns: 1fr;
+  }
+
+
+  .recommend-title p {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .recommend-image {
+    width: 115px;
+    height: 110px;
+  }
+
+
+  .recommend-content h3 {
+    font-size: 15px;
+  }
+
+}
+
+/* =========================
+   확장 기능 전체
+========================= */
+
+.feature-section {
+  width: 100%;
+
+  padding: 70px 5%;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #f8fbf4 100%
+    );
+
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================
+   제목
+========================= */
+
+.feature-header {
+  margin-bottom: 28px;
+}
+
+
+.feature-label {
+  margin: 0 0 7px;
+
+  color: #6e8b59;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.feature-title-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.feature-title-row h2 {
+  margin: 0;
+
+  color: #1f2b1b;
+
+  font-size: 34px;
+
+  font-weight: 800;
+}
+
+
+.feature-title-row p {
+  margin: 0;
+
+  color: #8b9187;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   카드 3개
+========================= */
+
+.feature-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* 카드 */
+
+.feature-card {
+  min-width: 0;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border:
+    1px solid #e6eadf;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(63, 79, 52, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.feature-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(63, 79, 52, 0.12);
+}
+
+
+/* =========================
+   카드 상단
+========================= */
+
+.feature-card-top {
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+
+  min-height: 95px;
+}
+
+
+/* 아이콘 */
+
+.feature-icon {
+  width: 72px;
+  height: 72px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 16px;
+
+  border-radius: 50%;
+
+  background:
+    #f0f6e9;
+
+  font-size: 33px;
+}
+
+
+/* 텍스트 */
+
+.feature-text {
+  padding-right: 20px;
+}
+
+
+.feature-text h3 {
+  margin:
+    0 0 7px;
+
+  color: #20291e;
+
+  font-size: 21px;
+
+  font-weight: 750;
+}
+
+
+.feature-text p {
+  margin: 0;
+
+  color: #7c8278;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* 화살표 */
+
+.feature-arrow {
+  position: absolute;
+
+  right: 0;
+
+  top: 26px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #53664a;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   카드 안 미리보기
+========================= */
+
+.feature-preview {
+  margin-top: 18px;
+
+  padding: 18px;
+
+  background:
+    #fbfcf9;
+
+  border:
+    1px solid #eef0eb;
+
+  border-radius: 14px;
+}
+
+
+.feature-preview strong {
+  color: #323a2e;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   장보기
+========================= */
+
+.shopping-items {
+  margin:
+    12px 0;
+}
+
+
+.shopping-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    7px 0;
+
+  border-bottom:
+    1px solid #eceee9;
+
+  color: #4c5248;
+
+  font-size: 13px;
+}
+
+
+.shopping-item:last-child {
+  border-bottom: none;
+}
+
+
+.shopping-item input {
+  accent-color:
+    #587846;
+}
+
+
+.item-emoji {
+  font-size: 21px;
+}
+
+
+.green-button {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding:
+    11px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    #4f713e;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.green-button:hover {
+  background:
+    #405e32;
+}
+
+
+/* =========================
+   조리도구
+========================= */
+
+.tool-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+
+.tool-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    12px 5px;
+
+  background:
+    #f5f6f3;
+
+  border-radius: 11px;
+
+  color: #555c51;
+
+  font-size: 11px;
+}
+
+
+.tool-emoji {
+  margin-bottom: 5px;
+
+  font-size: 27px;
+}
+
+
+/* =========================
+   소비기한
+========================= */
+
+.preview-title {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+
+.preview-title span {
+  color: #898e86;
+
+  font-size: 11px;
+}
+
+
+.expiry-item {
+  display: grid;
+
+  grid-template-columns:
+    1fr 70px 75px;
+
+  align-items: center;
+
+  gap: 5px;
+
+  padding:
+    9px 0;
+
+  border-bottom:
+    1px solid #eceee9;
+
+  font-size: 12px;
+}
+
+
+.expiry-item:last-child {
+  border-bottom: none;
+}
+
+
+.expiry-date {
+  color: #777d73;
+}
+
+
+/* 상태 */
+
+.expiry-status {
+  padding:
+    5px 7px;
+
+  text-align: center;
+
+  border-radius:
+    15px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.expiry-status.safe {
+
+  background:
+    #e8f5e6;
+
+  color:
+    #4d8b4a;
+}
+
+
+.expiry-status.warning {
+
+  background:
+    #fff2d7;
+
+  color:
+    #d48a22;
+}
+
+
+.expiry-status.danger {
+
+  background:
+    #ffe2dc;
+
+  color:
+    #d95d4f;
+}
+
+
+/* =========================
+   반응형
+========================= */
+
+@media (max-width: 1000px) {
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .feature-section {
+    padding:
+      45px 20px;
+  }
+
+
+  .feature-title-row {
+    display: block;
+  }
+
+
+  .feature-title-row h2 {
+    font-size: 28px;
+  }
+
+
+  .feature-title-row p {
+    margin-top: 8px;
   }
 
 }
