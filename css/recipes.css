@@ -3,8 +3,8 @@
 ========================= */
 
 .recommend-section {
-  width: 100%;
-  padding: 28px 20px;
+  /* width: 100%;
+  padding: 45px 20px;
 
   box-sizing: border-box;
 
@@ -16,8 +16,23 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-}
+} */
 
+width: 100%;
+
+padding: 70px 5%;
+
+box-sizing: border-box;
+
+background: linear-gradient(180deg, #fffdf8 0%, #f8fbf4 100%);
+
+font-family:
+  Pretendard,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+}
 
 /* =========================
    제목
@@ -32,14 +47,12 @@
   margin-bottom: 16px;
 }
 
-
 .recommend-title {
   display: flex;
   align-items: center;
 
   gap: 12px;
 }
-
 
 .recommend-title h2 {
   margin: 0;
@@ -50,7 +63,6 @@
   color: #20291e;
 }
 
-
 .recommend-title p {
   margin: 0;
 
@@ -58,7 +70,6 @@
 
   color: #969b92;
 }
-
 
 .more-link {
   color: #3f493a;
@@ -69,11 +80,9 @@
   text-decoration: none;
 }
 
-
 .more-link:hover {
   color: #536b32;
 }
-
 
 /* =========================
    카드 목록
@@ -82,12 +91,10 @@
 .recommend-list {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 12px;
 }
-
 
 /* =========================
    카드
@@ -113,14 +120,11 @@
     box-shadow 0.2s;
 }
 
-
 .recommend-card:hover {
   transform: translateY(-3px);
 
-  box-shadow:
-    0 7px 18px rgba(50, 65, 45, 0.09);
+  box-shadow: 0 7px 18px rgba(50, 65, 45, 0.09);
 }
-
 
 /* =========================
    음식 이미지
@@ -137,7 +141,6 @@
   flex-shrink: 0;
 }
 
-
 /* =========================
    오른쪽 내용
 ========================= */
@@ -150,7 +153,6 @@
   padding: 5px 8px 4px 14px;
 }
 
-
 .recommend-content h3 {
   margin: 0 0 5px 0;
 
@@ -159,7 +161,6 @@
   font-size: 17px;
   font-weight: 750;
 }
-
 
 /* 설명 */
 
@@ -174,7 +175,6 @@
 
   line-height: 1.5;
 }
-
 
 /* =========================
    시간 / 난이도
@@ -194,11 +194,9 @@
   font-size: 12px;
 }
 
-
 .difficulty {
   color: #63795a;
 }
-
 
 /* =========================
    재료 태그
@@ -211,7 +209,6 @@
 
   flex-wrap: wrap;
 }
-
 
 .recommend-tags span {
   padding: 4px 9px;
@@ -226,37 +223,29 @@
   font-weight: 500;
 }
 
-
 /* =========================
    반응형
 ========================= */
 
 @media (max-width: 900px) {
-
   .recommend-list {
     grid-template-columns: 1fr;
   }
 
-
   .recommend-title p {
     display: none;
   }
-
 }
 
-
 @media (max-width: 500px) {
-
   .recommend-image {
     width: 115px;
     height: 110px;
   }
 
-
   .recommend-content h3 {
     font-size: 15px;
   }
-
 }
 
 /* =========================
@@ -270,12 +259,7 @@
 
   box-sizing: border-box;
 
-  background:
-    linear-gradient(
-      180deg,
-      #fffdf8 0%,
-      #f8fbf4 100%
-    );
+  background: linear-gradient(180deg, #fffdf8 0%, #f8fbf4 100%);
 
   font-family:
     Pretendard,
@@ -285,7 +269,6 @@
     sans-serif;
 }
 
-
 /* =========================
    제목
 ========================= */
@@ -293,7 +276,6 @@
 .feature-header {
   margin-bottom: 28px;
 }
-
 
 .feature-label {
   margin: 0 0 7px;
@@ -306,7 +288,6 @@
   letter-spacing: 2px;
 }
 
-
 .feature-title-row {
   display: flex;
 
@@ -314,7 +295,6 @@
 
   gap: 18px;
 }
-
 
 .feature-title-row h2 {
   margin: 0;
@@ -326,7 +306,6 @@
   font-weight: 800;
 }
 
-
 .feature-title-row p {
   margin: 0;
 
@@ -335,7 +314,6 @@
   font-size: 15px;
 }
 
-
 /* =========================
    카드 3개
 ========================= */
@@ -343,12 +321,10 @@
 .feature-list {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 22px;
 }
-
 
 /* 카드 */
 
@@ -361,31 +337,22 @@
 
   background: #ffffff;
 
-  border:
-    1px solid #e6eadf;
+  border: 1px solid #e6eadf;
 
   border-radius: 20px;
 
-  box-shadow:
-    0 8px 25px
-    rgba(63, 79, 52, 0.07);
+  box-shadow: 0 8px 25px rgba(63, 79, 52, 0.07);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-
 .feature-card:hover {
+  transform: translateY(-5px);
 
-  transform:
-    translateY(-5px);
-
-  box-shadow:
-    0 12px 30px
-    rgba(63, 79, 52, 0.12);
+  box-shadow: 0 12px 30px rgba(63, 79, 52, 0.12);
 }
-
 
 /* =========================
    카드 상단
@@ -400,7 +367,6 @@
 
   min-height: 95px;
 }
-
 
 /* 아이콘 */
 
@@ -419,12 +385,10 @@
 
   border-radius: 50%;
 
-  background:
-    #f0f6e9;
+  background: #f0f6e9;
 
   font-size: 33px;
 }
-
 
 /* 텍스트 */
 
@@ -432,10 +396,8 @@
   padding-right: 20px;
 }
 
-
 .feature-text h3 {
-  margin:
-    0 0 7px;
+  margin: 0 0 7px;
 
   color: #20291e;
 
@@ -443,7 +405,6 @@
 
   font-weight: 750;
 }
-
 
 .feature-text p {
   margin: 0;
@@ -454,7 +415,6 @@
 
   line-height: 1.6;
 }
-
 
 /* 화살표 */
 
@@ -476,7 +436,6 @@
   cursor: pointer;
 }
 
-
 /* =========================
    카드 안 미리보기
 ========================= */
@@ -486,15 +445,12 @@
 
   padding: 18px;
 
-  background:
-    #fbfcf9;
+  background: #fbfcf9;
 
-  border:
-    1px solid #eef0eb;
+  border: 1px solid #eef0eb;
 
   border-radius: 14px;
 }
-
 
 .feature-preview strong {
   color: #323a2e;
@@ -502,16 +458,13 @@
   font-size: 13px;
 }
 
-
 /* =========================
    장보기
 ========================= */
 
 .shopping-items {
-  margin:
-    12px 0;
+  margin: 12px 0;
 }
-
 
 .shopping-item {
   display: flex;
@@ -520,48 +473,39 @@
 
   gap: 9px;
 
-  padding:
-    7px 0;
+  padding: 7px 0;
 
-  border-bottom:
-    1px solid #eceee9;
+  border-bottom: 1px solid #eceee9;
 
   color: #4c5248;
 
   font-size: 13px;
 }
 
-
 .shopping-item:last-child {
   border-bottom: none;
 }
 
-
 .shopping-item input {
-  accent-color:
-    #587846;
+  accent-color: #587846;
 }
-
 
 .item-emoji {
   font-size: 21px;
 }
-
 
 .green-button {
   width: 100%;
 
   margin-top: 8px;
 
-  padding:
-    11px;
+  padding: 11px;
 
   border: none;
 
   border-radius: 9px;
 
-  background:
-    #4f713e;
+  background: #4f713e;
 
   color: white;
 
@@ -572,12 +516,9 @@
   cursor: pointer;
 }
 
-
 .green-button:hover {
-  background:
-    #405e32;
+  background: #405e32;
 }
-
 
 /* =========================
    조리도구
@@ -586,14 +527,12 @@
 .tool-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 8px;
 
   margin-top: 14px;
 }
-
 
 .tool-item {
   display: flex;
@@ -604,11 +543,9 @@
 
   justify-content: center;
 
-  padding:
-    12px 5px;
+  padding: 12px 5px;
 
-  background:
-    #f5f6f3;
+  background: #f5f6f3;
 
   border-radius: 11px;
 
@@ -617,13 +554,11 @@
   font-size: 11px;
 }
 
-
 .tool-emoji {
   margin-bottom: 5px;
 
   font-size: 27px;
 }
-
 
 /* =========================
    소비기한
@@ -632,14 +567,12 @@
 .preview-title {
   display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
   align-items: center;
 
   margin-bottom: 12px;
 }
-
 
 .preview-title span {
   color: #898e86;
@@ -647,117 +580,86 @@
   font-size: 11px;
 }
 
-
 .expiry-item {
   display: grid;
 
-  grid-template-columns:
-    1fr 70px 75px;
+  grid-template-columns: 1fr 70px 75px;
 
   align-items: center;
 
   gap: 5px;
 
-  padding:
-    9px 0;
+  padding: 9px 0;
 
-  border-bottom:
-    1px solid #eceee9;
+  border-bottom: 1px solid #eceee9;
 
   font-size: 12px;
 }
-
 
 .expiry-item:last-child {
   border-bottom: none;
 }
 
-
 .expiry-date {
   color: #777d73;
 }
 
-
 /* 상태 */
 
 .expiry-status {
-  padding:
-    5px 7px;
+  padding: 5px 7px;
 
   text-align: center;
 
-  border-radius:
-    15px;
+  border-radius: 15px;
 
   font-size: 10px;
 
   font-weight: 700;
 }
 
-
 .expiry-status.safe {
+  background: #e8f5e6;
 
-  background:
-    #e8f5e6;
-
-  color:
-    #4d8b4a;
+  color: #4d8b4a;
 }
-
 
 .expiry-status.warning {
+  background: #fff2d7;
 
-  background:
-    #fff2d7;
-
-  color:
-    #d48a22;
+  color: #d48a22;
 }
-
 
 .expiry-status.danger {
+  background: #ffe2dc;
 
-  background:
-    #ffe2dc;
-
-  color:
-    #d95d4f;
+  color: #d95d4f;
 }
-
 
 /* =========================
    반응형
 ========================= */
 
 @media (max-width: 1000px) {
-
   .feature-list {
     grid-template-columns: 1fr;
   }
-
 }
 
-
 @media (max-width: 600px) {
-
   .feature-section {
-    padding:
-      45px 20px;
+    padding: 45px 20px;
   }
-
 
   .feature-title-row {
     display: block;
   }
 
-
   .feature-title-row h2 {
     font-size: 28px;
   }
 
-
   .feature-title-row p {
     margin-top: 8px;
   }
-
 }
