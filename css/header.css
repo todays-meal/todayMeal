@@ -30,17 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 2vw, 28px);
-
+  gap: clamp(14px, 2vw, 30px);
   min-width: 0;
 }
 
 .nav a {
   color: var(--color-text);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   white-space: nowrap;
-
   transition: color var(--transition);
 }
 
@@ -50,21 +48,16 @@
 
 .header-button {
   flex-shrink: 0;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 42px;
   padding: 0 18px;
-
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-
   background: var(--color-primary);
   border-radius: var(--radius-button);
-
   transition:
     background var(--transition),
     transform var(--transition);
