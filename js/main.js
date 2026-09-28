@@ -372,3 +372,45 @@ function createPreview(feature) {
 
   return "";
 }
+
+// =========================
+// FAQ Accordion
+// =========================
+
+const faqItems = document.querySelectorAll(".faq-gs-item");
+
+faqItems.forEach((item, index) => {
+  const question = item.querySelector(".faq-gs-question");
+  const answer = item.querySelector(".faq-gs-answer");
+  const arrow = item.querySelector(".faq-gs-arrow");
+
+  const answerId = `faq-answer-${index + 1}`;
+  answer.id = answerId;
+
+  const isActive = item.classList.contains("faq-gs-active");
+
+  question.setAttribute("aria-controls", answerId);
+  question.setAttribute("aria-expanded", String(isActive));
+
+  arrow.textContent = isActive ? "−" : "+";
+
+  question.addEventListener("click", () => {
+    const shouldOpen = !item.classList.contains("faq-gs-active");
+
+    faqItems.forEach((faqItem) => {
+      const faqQuestion = faqItem.querySelector(".faq-gs-question");
+      const faqArrow = faqItem.querySelector(".faq-gs-arrow");
+
+      faqItem.classList.remove("faq-gs-active");
+      faqQuestion.setAttribute("aria-expanded", "false");
+      faqArrow.textContent = "+";
+    });
+
+    if (shouldOpen) {
+      item.classList.add("faq-gs-active");
+      question.setAttribute("aria-expanded", "true");
+      arrow.textContent = "−";
+    }
+  });
+});
+

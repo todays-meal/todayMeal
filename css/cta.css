@@ -1,0 +1,241 @@
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  background: var(--color-background);
+}
+
+.cta-inner {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 360px;
+  padding: 56px 64px;
+
+  overflow: hidden;
+
+  background: var(--color-primary-light);
+  border-radius: 28px;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 600px;
+}
+
+.cta-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--color-primary);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.cta-title {
+  margin: 0 0 18px;
+
+  color: var(--color-title);
+
+  font-size: 36px;
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+.cta-description {
+  margin: 0 0 30px;
+
+  color: var(--color-text);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 50px;
+  padding: 0 24px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  background: var(--color-primary);
+
+  border-radius: var(--radius-button);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cta-button:hover {
+  color: #ffffff;
+
+  background: var(--color-primary-hover);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CTA Visual
+========================= */
+
+.cta-visual {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 300px;
+  height: 250px;
+}
+
+.cta-dish,
+.cta-ingredient {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 30px rgba(31, 43, 27, 0.08);
+}
+
+.cta-dish {
+  right: 20px;
+  bottom: 10px;
+
+  width: 150px;
+  height: 150px;
+
+  font-size: 76px;
+
+  border-radius: 50%;
+}
+
+.cta-ingredient {
+  width: 74px;
+  height: 74px;
+
+  font-size: 34px;
+
+  border-radius: 20px;
+}
+
+.cta-ingredient-egg {
+  top: 4px;
+  left: 30px;
+
+  transform: rotate(-7deg);
+}
+
+.cta-ingredient-tomato {
+  top: 72px;
+  right: 5px;
+
+  transform: rotate(8deg);
+}
+
+.cta-ingredient-potato {
+  bottom: 14px;
+  left: 18px;
+
+  transform: rotate(5deg);
+}
+
+
+/* =========================
+   CTA Responsive
+========================= */
+
+@media (max-width: 992px) {
+  .cta-inner {
+    padding: 48px;
+  }
+
+  .cta-visual {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-inner {
+    flex-direction: column;
+
+    gap: 36px;
+
+    padding: 40px 24px;
+
+    text-align: center;
+  }
+
+  .cta-content {
+    max-width: 100%;
+  }
+
+  .cta-title {
+    font-size: 30px;
+  }
+
+  .cta-description br {
+    display: none;
+  }
+
+  .cta-visual {
+    width: 260px;
+    height: 210px;
+  }
+
+  .cta-dish {
+    width: 130px;
+    height: 130px;
+
+    font-size: 64px;
+  }
+
+  .cta-ingredient {
+    width: 64px;
+    height: 64px;
+
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-inner {
+    padding: 36px 20px;
+
+    border-radius: 20px;
+  }
+
+  .cta-title {
+    font-size: 27px;
+  }
+
+  .cta-description {
+    font-size: 15px;
+  }
+
+  .cta-visual {
+    transform: scale(0.9);
+  }
+}
