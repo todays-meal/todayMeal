@@ -244,3 +244,15 @@
     font-size: 28px;
   }
 }
+
+/* 핵심 기능 데모 페이지 이동 링크 */
+.feature-demo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.feature-demo-link:hover {
+  color: #fff;
+}

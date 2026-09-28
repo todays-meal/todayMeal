@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="냉장고 속 재료를 선택해 만들 수 있는 레시피를 확인하는 오늘한끼 핵심 기능 데모입니다."
+    />
+    <title>오늘한끼 | 핵심 기능 체험</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+  </head>
+
+  <body class="demo-page">
+    <header class="demo-header">
+      <div class="page-container demo-header-inner">
+        <a href="./index.html" class="demo-logo" aria-label="오늘한끼 랜딩페이지로 이동">
+          <img src="./images/logo.png" alt="오늘한끼" />
+        </a>
+
+        <a href="./index.html#feature" class="demo-back">← 랜딩페이지로 돌아가기</a>
+      </div>
+    </header>
+
+    <main class="demo-main">
+      <section class="demo-hero">
+        <div class="page-container">
+          <span class="demo-eyebrow">CORE FEATURE DEMO</span>
+          <h1>냉장고에 어떤 재료가 있나요?</h1>
+          <p>
+            가지고 있는 재료를 선택한 뒤 레시피 찾기를 눌러보세요.<br />
+            미리 준비한 예시 데이터에서 활용 가능한 메뉴를 찾아드려요.
+          </p>
+        </div>
+      </section>
+
+      <section class="demo-workspace section" aria-labelledby="ingredient-heading">
+        <div class="page-container demo-grid">
+          <div class="demo-panel ingredient-panel">
+            <div class="demo-panel-head">
+              <div>
+                <span class="demo-step">STEP 01</span>
+                <h2 id="ingredient-heading">재료 선택</h2>
+              </div>
+              <span class="demo-count" id="selectedCount">0개 선택</span>
+            </div>
+
+            <div class="demo-categories" aria-label="재료 카테고리">
+              <button type="button" class="demo-category active" data-category="전체">전체</button>
+              <button type="button" class="demo-category" data-category="채소">채소</button>
+              <button type="button" class="demo-category" data-category="단백질">단백질</button>
+              <button type="button" class="demo-category" data-category="기타">기타</button>
+            </div>
+
+            <div class="demo-ingredients" id="ingredientList"></div>
+
+            <div class="demo-selected-box">
+              <div class="demo-selected-head">
+                <strong>선택한 재료</strong>
+                <button type="button" id="resetButton" class="demo-reset">전체 삭제</button>
+              </div>
+              <div id="selectedList" class="demo-selected-list">
+                <span class="demo-empty-text">아직 선택한 재료가 없어요.</span>
+              </div>
+            </div>
+
+            <button type="button" id="searchButton" class="demo-search-button" disabled>
+              재료를 선택해주세요
+            </button>
+          </div>
+
+          <section class="demo-panel result-panel" aria-labelledby="result-heading">
+            <div class="demo-panel-head">
+              <div>
+                <span class="demo-step">STEP 02</span>
+                <h2 id="result-heading">추천 결과</h2>
+              </div>
+            </div>
+
+            <div id="recipeResult" class="demo-results" aria-live="polite">
+              <div class="demo-result-placeholder">
+                <div class="demo-placeholder-icon" aria-hidden="true">🍳</div>
+                <strong>어떤 요리를 만들 수 있을까요?</strong>
+                <p>왼쪽에서 재료를 선택하면<br />추천 가능한 메뉴를 보여드려요.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="demo-note">
+        <div class="page-container">
+          <div class="demo-note-inner">
+            <strong>이번 프로젝트에서는</strong>
+            <p>
+              실제 AI나 데이터베이스 대신 JavaScript 배열에 준비한 예시 레시피를 이용해
+              <b>재료 선택 → 조건 비교 → 추천 결과 출력</b> 흐름을 간단하게 구현했습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="demo-footer">
+      <div class="page-container demo-footer-inner">
+        <span>© 2026 오늘한끼 · Team 5</span>
+        <a href="./index.html">서비스 소개 보기 →</a>
+      </div>
+    </footer>
+
+    <script src="./js/demo.js"></script>
+  </body>
+</html>
