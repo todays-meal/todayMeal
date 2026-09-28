@@ -86,7 +86,9 @@ function renderRecommendRecipes() {
 }
 
 // 함수 실행
-renderRecommendRecipes();
+if (recommendList) {
+  renderRecommendRecipes();
+}
 
 const features = [
   {
@@ -215,13 +217,7 @@ function renderFeatures() {
 
         </div>
 
-        <button
-          class="feature-arrow"
-          data-id="${feature.id}"
-          aria-label="${feature.title} 자세히 보기"
-        >
-          ›
-        </button>
+        <span class="feature-arrow" aria-hidden="true">›</span>
 
       </div>
 
@@ -238,7 +234,9 @@ function renderFeatures() {
   });
 }
 
-renderFeatures();
+if (featureList) {
+  renderFeatures();
+}
 
 function createPreview(feature) {
   // 장보기
@@ -257,10 +255,7 @@ function createPreview(feature) {
               (item) => `
                 <div class="shopping-item">
 
-                  <input
-                    type="checkbox"
-                    checked
-                  >
+                  <span class="shopping-check" aria-hidden="true">✓</span>
 
                   <span class="item-emoji">
                     ${item.emoji}
@@ -277,9 +272,9 @@ function createPreview(feature) {
 
         </div>
 
-        <button class="green-button">
+        <div class="green-button">
           🛒 장바구니에 담기
-        </button>
+        </div>
 
       </div>
     `;

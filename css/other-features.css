@@ -1,216 +1,134 @@
-/* =========================
-   확장 기능 전체
-========================= */
-
 .feature-section {
   width: 100%;
-
-  padding: 70px 5%;
-
-  box-sizing: border-box;
-
-  background: linear-gradient(180deg, #fffdf8 0%, #f8fbf4 100%);
-
-  font-family:
-    Pretendard,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  padding: var(--section-padding) 24px;
+  background: linear-gradient(180deg, #f8fbf4 0%, var(--color-background) 100%);
 }
 
-/* =========================
-   제목
-========================= */
+.feature-header,
+.feature-list {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .feature-header {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 .feature-section .feature-label {
-  margin: 0 0 7px;
-
-  color: #6e8b59;
-
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 0;
+  color: var(--color-primary);
   font-size: 13px;
   font-weight: 700;
-
-  letter-spacing: 2px;
+  letter-spacing: 0.12em;
+  background: transparent;
 }
 
 .feature-title-row {
   display: flex;
-
-  align-items: center;
-
-  gap: 18px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .feature-title-row h2 {
   margin: 0;
-
-  color: #1f2b1b;
-
-  font-size: 34px;
-
+  color: var(--color-title);
+  font-size: var(--font-section-title);
   font-weight: 800;
+  letter-spacing: -0.025em;
 }
 
 .feature-title-row p {
+  max-width: 520px;
   margin: 0;
-
-  color: #8b9187;
-
+  color: var(--color-muted);
   font-size: 15px;
+  line-height: 1.7;
 }
-
-/* =========================
-   카드 3개
-========================= */
 
 .feature-list {
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
-
-/* 카드 */
 
 .feature-card {
   min-width: 0;
-
   padding: 24px;
-
-  box-sizing: border-box;
-
-  background: #ffffff;
-
-  border: 1px solid #e6eadf;
-
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
-
-  box-shadow: 0 8px 25px rgba(63, 79, 52, 0.07);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(63, 79, 52, 0.055);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-
-  box-shadow: 0 12px 30px rgba(63, 79, 52, 0.12);
+  border-color: rgba(83, 107, 50, 0.25);
+  box-shadow: var(--shadow-hover);
 }
-
-/* =========================
-   카드 상단
-========================= */
 
 .feature-card-top {
   display: flex;
-
   align-items: center;
-
-  position: relative;
-
-  min-height: 95px;
+  min-height: 88px;
 }
-
-/* 아이콘 */
 
 .feature-icon {
-  width: 72px;
-  height: 72px;
-
   flex-shrink: 0;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
-  margin-right: 16px;
-
-  border-radius: 50%;
-
-  background: #f0f6e9;
-
-  font-size: 33px;
+  width: 62px;
+  height: 62px;
+  margin-right: 14px;
+  font-size: 28px;
+  background: var(--color-primary-light);
+  border-radius: 18px;
 }
 
-/* 텍스트 */
-
 .feature-text {
-  padding-right: 20px;
+  min-width: 0;
 }
 
 .feature-text h3 {
-  margin: 0 0 7px;
-
-  color: #20291e;
-
-  font-size: 21px;
-
+  margin: 0 0 6px;
+  color: var(--color-title);
+  font-size: 19px;
   font-weight: 750;
 }
 
 .feature-text p {
   margin: 0;
-
-  color: #7c8278;
-
-  font-size: 13px;
-
+  color: var(--color-muted);
+  font-size: 12px;
   line-height: 1.6;
 }
 
-/* 화살표 */
-
 .feature-arrow {
-  position: absolute;
-
-  right: 0;
-
-  top: 26px;
-
-  border: none;
-
-  background: transparent;
-
-  color: #53664a;
-
-  font-size: 32px;
-
-  cursor: pointer;
+  margin-left: auto;
+  color: var(--color-primary);
+  font-size: 26px;
+  line-height: 1;
 }
-
-/* =========================
-   카드 안 미리보기
-========================= */
 
 .feature-section .feature-preview {
   margin-top: 18px;
-
   padding: 18px;
-
   background: #fbfcf9;
-
   border: 1px solid #eef0eb;
-
   border-radius: 14px;
+  box-shadow: none;
 }
 
 .feature-section .feature-preview strong {
-  color: #323a2e;
-
+  color: var(--color-title);
   font-size: 13px;
 }
-
-/* =========================
-   장보기
-========================= */
 
 .shopping-items {
   margin: 12px 0;
@@ -218,132 +136,93 @@
 
 .shopping-item {
   display: flex;
-
   align-items: center;
-
   gap: 9px;
-
   padding: 7px 0;
-
-  border-bottom: 1px solid #eceee9;
-
-  color: #4c5248;
-
+  color: var(--color-text);
   font-size: 13px;
+  border-bottom: 1px solid #eceee9;
 }
 
 .shopping-item:last-child {
   border-bottom: none;
 }
 
-.shopping-item input {
-  accent-color: #587846;
+.shopping-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  background: var(--color-primary);
+  border-radius: 5px;
 }
 
 .item-emoji {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .green-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-
+  min-height: 38px;
   margin-top: 8px;
-
-  padding: 11px;
-
-  border: none;
-
-  border-radius: 9px;
-
-  background: #4f713e;
-
-  color: white;
-
-  font-size: 13px;
-
+  color: #fff;
+  font-size: 12px;
   font-weight: 700;
-
-  cursor: pointer;
+  background: var(--color-primary);
+  border-radius: 9px;
 }
-
-.green-button:hover {
-  background: #405e32;
-}
-
-/* =========================
-   조리도구
-========================= */
 
 .tool-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 8px;
-
   margin-top: 14px;
 }
 
 .tool-item {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 12px 5px;
-
-  background: #f5f6f3;
-
-  border-radius: 11px;
-
-  color: #555c51;
-
+  color: var(--color-text);
   font-size: 11px;
+  background: #f5f6f3;
+  border-radius: 11px;
 }
 
 .tool-emoji {
   margin-bottom: 5px;
-
-  font-size: 27px;
+  font-size: 25px;
 }
-
-/* =========================
-   소비기한
-========================= */
 
 .preview-title {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   margin-bottom: 12px;
 }
 
 .preview-title span {
-  color: #898e86;
-
+  color: var(--color-muted);
   font-size: 11px;
 }
 
 .expiry-item {
   display: grid;
-
-  grid-template-columns: 1fr 70px 75px;
-
+  grid-template-columns: 1fr 64px 72px;
   align-items: center;
-
   gap: 5px;
-
   padding: 9px 0;
-
-  border-bottom: 1px solid #eceee9;
-
   font-size: 12px;
+  border-bottom: 1px solid #eceee9;
 }
 
 .expiry-item:last-child {
@@ -351,65 +230,53 @@
 }
 
 .expiry-date {
-  color: #777d73;
+  color: var(--color-muted);
 }
 
-/* 상태 */
-
 .expiry-status {
-  padding: 5px 7px;
-
+  padding: 5px 6px;
   text-align: center;
-
   border-radius: 15px;
-
   font-size: 10px;
-
   font-weight: 700;
 }
 
 .expiry-status.safe {
-  background: #e8f5e6;
-
   color: #4d8b4a;
+  background: #e8f5e6;
 }
 
 .expiry-status.warning {
+  color: #b87418;
   background: #fff2d7;
-
-  color: #d48a22;
 }
 
 .expiry-status.danger {
+  color: #c94d41;
   background: #ffe2dc;
-
-  color: #d95d4f;
 }
-
-/* =========================
-   반응형
-========================= */
 
 @media (max-width: 1000px) {
   .feature-list {
     grid-template-columns: 1fr;
   }
+
+  .feature-card-top {
+    min-height: auto;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .feature-section {
-    padding: 45px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .feature-title-row {
     display: block;
   }
 
-  .feature-title-row h2 {
-    font-size: 28px;
-  }
-
   .feature-title-row p {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
